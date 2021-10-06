@@ -1,0 +1,48 @@
+void menu()
+{
+	int opcao,R1,R2,EV,EH;
+	printf("\n--------------------------Menu de Transformações--------------------------");
+	printf("\n 1 - Rotacione a imagem em 90° no sentido horário.");
+	printf("\n 2 - Rotacione a imagem em 90° no sentido anti-horário. ");
+	printf("\n 3 - Aplique espelhamentos verticais na imagem. ");	
+	printf("\n 4 - Aplique espelhamentos horizontais na imagem. ");	
+	printf("\n 0 - Sair \n");
+	printf("\n\nDigite a opção desejada: ");
+	scanf("%d",&opcao);
+	switch(opcao)
+	{
+		case 1:
+			{
+				printf("\nQuantas rotações deseja fazer? ");
+				scanf("%d",&R1);
+				hor90(R1,Arte);
+			}
+			break;
+		case 2:
+			{
+				printf("\nQuantas rotações deseja fazer? ");
+				scanf("%d",&R2);
+				ant90(R2,Arte);
+			}
+			break;
+		case 3:
+			{
+				printf("\nQuantos espelhamentos deseja fazer? ");
+				scanf("%d",&EV);
+				EspVert(EV,Arte);
+			}
+			break;
+		case 4:
+			{
+				printf("\nQuantos espelhamentos deseja fazer? ");
+				scanf("%d",&EH);
+				EspHori(EH,Arte);
+			}
+			break;
+		default: 
+			{
+				printf("\nOpção não encontrada! Digite novamente!");
+				menurot(Arte);
+			}
+	}
+}
